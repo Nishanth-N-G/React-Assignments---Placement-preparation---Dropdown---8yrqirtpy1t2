@@ -12,13 +12,17 @@ function Landmark(props) {
     // console.log(landmarkIndex);
     return (
         <div>
+            <lable> Towns : </lable>
             <select onChange={HandleLandmark}>
                 {landmark.landmarks.map((landmarkName, index) => (
-                    <option key={index} value={`${index}`} id={`#city-name${index}`}>{landmarkName.name}</option>
+                    <option key={index} value={`${index}`} id={`landmark-name${index}`}>{landmarkName.name}</option>
                 ))}
             </select>
             {
-                <div> {landmark.landmarks[`${landmarkIndex}`].description} </div>
+                <>
+                    <h2 id={`landmark-title${landmarkIndex}`}> {landmark.landmarks[`${landmarkIndex}`].name} </h2>
+                    <div id={`landmark-description${landmarkIndex}`}> {landmark.landmarks[`${landmarkIndex}`].description} </div>
+                </>
             }
         </div>
     )

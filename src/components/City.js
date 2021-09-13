@@ -14,13 +14,17 @@ function City(props) {
 
     return (
         <div>
+            <label> Cities : </label>
             <select onChange={HandleCity}>
                 {cities.city.map((cityName, index) => (
-                    <option key={index} value={`${index}`} id={`#city-name${index}`}>{cityName.name}</option>
+                    <option key={index} value={`${index}`} id={`city-name${index}`}>{cityName.name}</option>
                 ))}
             </select>
             {
-                <div> {cities.city[`${cityIndex}`].description} </div>
+                <>
+                    <h2 id={`city-title${landmarkIndex}`}> {cities.city[`${cityIndex}`].name} </h2>
+                    <div id={`city-description${landmarkIndex}`}> {cities.city[`${cityIndex}`].description} </div>
+                </>
             }
             <Landmark landmark={cities.city[`${cityIndex}`]} />
         </div>

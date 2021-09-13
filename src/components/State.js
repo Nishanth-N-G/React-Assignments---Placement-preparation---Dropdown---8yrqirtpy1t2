@@ -12,14 +12,18 @@ function State(props) {
 
     return (
         <div>
+            <label> States :  </label>
             <select onChange={HandleState}>
                 {props.states.map((state, index) => (
-                    <option key={index} value={`${index}`} id={`#state-name${index}`}>{state.name}</option>
+                    <option key={index} value={`${index}`} id={`state-name${index}`}>{state.name}</option>
                 ))}
 
             </select>
             {
-                <div> {props.states[`${stateIndex}`].description} </div>
+                <>
+                    <h2 id={`state-title${landmarkIndex}`}> {props.states[`${stateIndex}`].name} </h2>
+                    <div id={`state-description${landmarkIndex}`}> {props.states[`${stateIndex}`].description} </div>
+                </>
             }
             <City city={props.states[`${stateIndex}`]} />
         </div>
