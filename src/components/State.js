@@ -2,22 +2,26 @@ import React, { useState } from 'react'
 import City from './City'
 
 function State(props) {
-    // const [stateName, setStateName] = useState("Select State");
+    const [stateIndex, setStateIndex] = useState("0");
 
-    // let HandleState = event => {
-    //     setStateName(event.target.value);
-    // }
+    const HandleState = (event) => {
+        setStateIndex(event.target.value);
+    }
 
-    // console.log(stateName);
+    // console.log(stateIndex);
 
     return (
         <div>
-            <select >
-                {props.states.map((state) => (
-                    <option value={state.name}>{state.name}</option>
+            <select onChange={HandleState}>
+                {props.states.map((state, index) => (
+                    <option key={index} value={`${index}`} id={`#state-name${index}`}>{state.name}</option>
                 ))}
+
             </select>
-            <City />
+            {
+                <div> {props.states[`${stateIndex}`].description} </div>
+            }
+            <City city={props.states[`${stateIndex}`]} />
         </div>
     )
 }

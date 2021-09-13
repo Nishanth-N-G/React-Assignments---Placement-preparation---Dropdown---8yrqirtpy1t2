@@ -144,6 +144,7 @@ function App() {
 	return (
 		<div id="main">
 			<State states={states} />
+			{/* {states[0].city[0].description} */}
 		</div>
 	);
 }
