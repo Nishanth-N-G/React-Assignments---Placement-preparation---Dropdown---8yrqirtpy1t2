@@ -12,7 +12,7 @@ function State(props) {
 
     return (
         <div>
-            <label> States :  </label>
+            <lable> States :  </lable>
             <select onChange={HandleState}>
                 {props.states.map((state, index) => (
                     <option key={index} value={`${index}`} id={`state-name${index}`}>{state.name}</option>

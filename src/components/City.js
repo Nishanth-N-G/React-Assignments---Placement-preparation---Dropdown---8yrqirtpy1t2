@@ -14,7 +14,7 @@ function City(props) {
 
     return (
         <div>
-            <label> Cities : </label>
+            <lable> Cities : </lable>
             <select onChange={HandleCity}>
                 {cities.city.map((cityName, index) => (
                     <option key={index} value={`${index}`} id={`city-name${index}`}>{cityName.name}</option>
