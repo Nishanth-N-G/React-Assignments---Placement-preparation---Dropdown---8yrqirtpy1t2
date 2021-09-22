@@ -21,10 +21,10 @@ function City(props) {
                 ))}
             </select>
             {
-                <>
-                    <h2 id={`city-title${cityIndex}`}> {cities.city[`${cityIndex}`].name} </h2>
-                    <div id={`city-description${cityIndex}`}> {cities.city[`${cityIndex}`].description} </div>
-                </>
+                <div id='city-name'>
+                    <h2 id='city-title'>{cities.city[`${cityIndex}`].name} </h2>
+                    <div id='city-description'> {cities.city[`${cityIndex}`].description} </div>
+                </div>
             }
             <Landmark landmark={cities.city[`${cityIndex}`]} />
         </div>

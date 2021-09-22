@@ -20,10 +20,10 @@ function State(props) {
 
             </select>
             {
-                <>
-                    <h2 id={`state-title${stateIndex}`}> {props.states[`${stateIndex}`].name} </h2>
-                    <div id={`state-description${stateIndex}`}> {props.states[`${stateIndex}`].description} </div>
-                </>
+                <div id='state-name'>
+                    <h2 id='state-title'> {props.states[`${stateIndex}`].name} </h2>
+                    <div id='state-description'> {props.states[`${stateIndex}`].description} </div>
+                </div>
             }
             <City city={props.states[`${stateIndex}`]} />
         </div>

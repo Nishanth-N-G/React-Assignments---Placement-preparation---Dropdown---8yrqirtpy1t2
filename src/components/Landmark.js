@@ -19,10 +19,10 @@ function Landmark(props) {
                 ))}
             </select>
             {
-                <>
-                    <h2 id={`landmark-title${landmarkIndex}`}> {landmark.landmarks[`${landmarkIndex}`].name} </h2>
-                    <div id={`landmark-description${landmarkIndex}`}> {landmark.landmarks[`${landmarkIndex}`].description} </div>
-                </>
+                <div id='landmark-name'>
+                    <h2 id='landmark-title'> {landmark.landmarks[`${landmarkIndex}`].name} </h2>
+                    <div id='landmark-description'> {landmark.landmarks[`${landmarkIndex}`].description} </div>
+                </div>
             }
         </div>
     )
